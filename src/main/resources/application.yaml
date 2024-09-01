@@ -3,10 +3,38 @@ server:
 spring:
     application:
         name: GestionUtilisateurDom
+    security:
+        oauth2:
+            client:
+                provider: 
+                    keycloak:
+                        issuer-uri: http://localhost:8080/realms/Realm_Dom
+                registration:
+                    keycloak:
+                        client-id: domRealm
+                        client-secret: DNtI3feQIgm3zMZbx8D8r6bxD4Z70sjt
+    datasource:
+        url: jdbc:postgresql://localhost:5432/domUser
+        username: babagl
+        password: Bismillah
+        driver-class-name: org.postgresql.Driver
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
 
-# eureka:
-#     client:
-#         service-url:
-#             defaultZone: http://localhost:8761/eureka
-#         fetch-registry: true
-#         register-with-eureka: true    
+eureka:
+    client:
+        enabled: false    
+
+keycloak:
+    realm: domRealm
+    auth-server-url: http://localhost:8080
+    ressource: domRealm
+    credentials: 
+        secret: DNtI3feQIgm3zMZbx8D8r6bxD4Z70sjt
+    use-ressource-role-mapping: true
+
+
+    
