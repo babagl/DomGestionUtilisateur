@@ -1,4 +1,4 @@
-package com.dom.GestionUtilisateurDom.entity;
+package com.dom.gestionutilisateurdom.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

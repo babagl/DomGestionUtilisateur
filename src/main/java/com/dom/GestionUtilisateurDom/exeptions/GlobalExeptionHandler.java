@@ -1,4 +1,4 @@
-package com.dom.GestionUtilisateurDom.exeptions;
+package com.dom.gestionutilisateurdom.exeptions;
 
 public class GlobalExeptionHandler {
     

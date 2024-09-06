@@ -1,4 +1,4 @@
-package com.dom.GestionUtilisateurDom.controllers;
+package com.dom.gestionutilisateurdom.controllers;
 
 public class UserController {
     

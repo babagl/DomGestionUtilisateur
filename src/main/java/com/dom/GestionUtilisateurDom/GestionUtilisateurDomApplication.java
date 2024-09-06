@@ -1,4 +1,4 @@
-package com.dom.GestionUtilisateurDom;
+package com.dom.gestionutilisateurdom;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

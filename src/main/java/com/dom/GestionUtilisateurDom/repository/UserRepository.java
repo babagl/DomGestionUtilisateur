@@ -1,4 +1,4 @@
-package com.dom.GestionUtilisateurDom.repository;
+package com.dom.gestionutilisateurdom.repository;
 
 public class UserRepository {
     

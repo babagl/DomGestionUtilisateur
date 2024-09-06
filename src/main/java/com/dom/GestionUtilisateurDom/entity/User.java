@@ -1,4 +1,4 @@
-package com.dom.GestionUtilisateurDom.entity;
+package com.dom.gestionutilisateurdom.entity;
 
 import java.util.List;
 
