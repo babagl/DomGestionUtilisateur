@@ -1,14 +1,21 @@
 server:
     port: 8090
 spring:
+    devtools:
+        restart:
+            enabled: true
+    main:
+        allow-bean-definition-overriding: true
     application:
         name: GestionUtilisateurDom
+        ###Security config
     security:
         oauth2:
             client:
                 provider: 
                     keycloak:
-                        issuer-uri: http://localhost:8080/realms/Realm_Dom
+                        issuer-uri: http://localhost:8080/realms/AuthUserDom
+                        jwk-set-uri: http://localhost:8080/realms/AuthUserDom/protocol/openid-connect/certs
                 registration:
                     keycloak:
                         client-id: domRealm
@@ -23,18 +30,24 @@ spring:
             ddl-auto: update
         show-sql: true
         database-platform: org.hibernate.dialect.PostgreSQLDialect
+        
 
 eureka:
     client:
         enabled: false    
 
-keycloak:
-    realm: domRealm
-    auth-server-url: http://localhost:8080
-    ressource: domRealm
-    credentials: 
-        secret: DNtI3feQIgm3zMZbx8D8r6bxD4Z70sjt
-    use-ressource-role-mapping: true
+# keycloak:
+#     realm: domRealm
+#     auth-server-url: http://localhost:8080
+#     ressource: domRealm
+#     credentials: 
+#         secret: DNtI3feQIgm3zMZbx8D8r6bxD4Z70sjt
+#     use-ressource-role-mapping: true
 
+#JWT Config
+jwt:
+    auth:
+        converter:
+            ressource-id: AuthUserDomClient
+            principal-attribut: principal_username
 
-    
